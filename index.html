@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body {
+            padding: 40px;
+        }
+        .slider {
+            margin-bottom: 30px;
+        }
+        input{
+            width: 300px;
+        }
+        .value {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <h2>От 0 до 100</h2>
+        <input type="range" id="slider1" min="0" max="100" value="0">
+        <span class="value" id="val1">0</span>
+    </div>
+
+    <div class="slider">
+        <h2>С привязкой по точкам </h2>
+        <input type="range" id="slider2" min="0" max="100" step="20" value="0">
+        <span class="value" id="val2">0</span>
+    </div>
+
+    <script>
+        document.getElementById('slider1').oninput = function() {
+            document.getElementById('val1').textContent = this.value;
+        };
+        document.getElementById('slider2').oninput = function() {
+            document.getElementById('val2').textContent = this.value;
+        };
+    </script>
+    
+</body>
+</html>
